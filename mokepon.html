@@ -4,43 +4,57 @@
         <meta charset="utf-8" />
         <title>MOKEPON!</title>
         <script src="./js/mokepon.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>MOKEPON! 🔥💧🌱</h1>
-
-        <section id="seleccionar-mascota">
-            <h2>Elige tu mascota:</h2>
-
-            <label for="hipodoge">Hipodoge</label>
-            <input type="radio" name="mascota" id="hipodoge" />
+        <h1 id="title">Mokepon! 🔥💧🌱</h1>
+        <section id="choosePet">
             
-            <label for="capipepo">Capipepo</label>
-            <input type="radio" name="mascota" id="capipepo" />
-            
-            <label for="ratigueya">Ratigueya</label>
-            <input type="radio" name="mascota" id="ratigueya" />
 
-            <button id="boton-mascota">Seleccionar</button>
+            <h2 class="subtitle">Elige tu mascota:</h2>
+
+            <div class="btnStats">
+                <label class="mokepon-stats" for="garydous">
+                    <p>Garydous</p>
+                    <img src="resources/Garydous.png" alt="Garydous">
+                </label>
+                <input type="radio" name="mascota" id="garydous" />
+                
+                <label class="mokepon-stats" for="chikbo">
+                    <p>Chikbo</p>
+                    <img  src="resources/picathor.png" alt="Chikbo">
+                </label>
+                <input type="radio" name="mascota" id="chikbo" />
+                
+                <label class="mokepon-stats" for="smyglet">
+                    <p>smyglet</p>
+                    <img src="resources/smyglet.png" alt="Smyglet">
+                </label>
+                <input type="radio" name="mascota" id="smyglet" />
+            </div>
+            
+
+            <button id="btnPet">Vamos a Luchar</button>
         </section>
 
-        <section id="seleccionar-ataque">
+        <section id="chooseAttack">
             <h2>Elige tu ataque:</h2>
 
-            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+            <p>Tu mascota <span id="allyPet"></span> tiene <span id="hpAllyPet">3</span> vidas</p>
+            <p>La mascota <span id="enemyPet"></span> del enemigo tiene <span id="hpEnemyPet">3</span> vidas</p>
 
-            <p>
-                <button id="boton-fuego">Fuego 🔥</button>
-                <button id="boton-agua">Agua 💧</button>
-                <button id="boton-tierra">Tierra 🌱</button>
+            <p id="attacks">
+                <button id="btnFire">Fuego 🔥</button>
+                <button id="btnWater">Agua 💧</button>
+                <button id="btnPlant">Tierra 🌱</button>
             </p>
         </section>
 
-        <section id="mensajes">
+        <section id="alertsCombat">
         </section>
 
-        <section id="reiniciar">
-            <button id="boton-reiniciar">Reiniciar</button>
+        <section id="reboot">
+            <button id="btnReboot">Reiniciar</button>
         </section>
     </body>
 </html>

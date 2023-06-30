@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap');
+
 
 body{
     font-family: 'Press Start 2P', cursive;
     background-color: #10A19D;
 }
 
-input{
+
+input[type="radio"]{
     display: none;
     justify-content: center;
+}
+input[type="radio"]:checked {
+    background-color: #f0f8ff;
 }
 
 #title{
@@ -36,7 +41,7 @@ input{
     text-shadow: 1px 1px 1px black;
 }
 
-.mokepon-stats{
+.petCard{
     width: 250px;
     height: 330px;
     background-color: #77037B;
@@ -51,12 +56,11 @@ input{
     text-shadow: 1px 1px 1px black;
     display: flex;
     flex-direction: column;
+    border-color: transparent;
 }
-.mokepon-stats img{
+.petCard img{
     justify-items: center;
     overflow: hidden;
-    
-
 }
 
 .btnStats{
@@ -65,9 +69,7 @@ input{
 }
 label:hover{
     cursor: pointer;
-    background-color: #f0f8ff
-
-;
+    background-color: #f0f8ff;
 }
 .subtitle {
     font-size: 50px;
@@ -88,6 +90,7 @@ label:hover{
     position: relative;
 }
 
+
 #btnPet:hover{
     cursor: pointer;
     background-color: #000000;
@@ -97,4 +100,88 @@ label:hover{
     -3px -3px 2px 2px #ACBCFF
     3px 1px 2px 2px #ACBCFF;
 }
+input:focus .label {
+  color: #B799FF;
+}
+input:blur .label{
+    color: #f0f8ff;
+}
+#chooseAttack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.btnAttack{
+    width: 140px;
+    height: 60px;
+    border-radius: 100px ;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    padding: 1px 6px;
+    color: #f0f8ff;
+    background-color: #77037B;
+    box-sizing: 20px;
+    border-color: transparent;
+}
+.btnAttack:hover{
+    cursor: pointer;
+    background-color: #f0f8ff;
+    color: #77037B;
+    border-color: transparent;
+}
+#alerts-Combat{
+    width: auto;
+    padding: 10px;
+    color: #f0f8ff;
+    background-color: #77037B;
+    border-radius: 30px;
+    border: transparent;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction:column ;
+}
+
+#btnReboot{
+    border: none;
+    color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    width: 150px;
+
+}
+.attacks{
+    display: grid;
+    grid-template-columns: [column1] 170px [column2] 170px ;
+    column-gap: 50px;
+    padding: 14px 0px 14px 0px;
+    place-items: center;
+    align-content: center;
+}
+#hpAllyPet{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 1px;
+    margin: 10px;
+}
+#hpEnemyPet{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 1px;
+    margin: 10px;
+}
+#player-Attacks{
+    align-self: stretch;
+    
+}
+#enemy-Attacks{
+    align-self: stretch;
+    
+}
+
+@media (max-width:360 )
+
 

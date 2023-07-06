@@ -7,8 +7,12 @@ function iniciarJuego() {
     let sectionSeleccionarAtaque = document.getElementById('chooseAttack')
     sectionSeleccionarAtaque.style.display = 'none'
 
+    
     let sectionreboot = document.getElementById('reboot')
     sectionreboot.style.display = 'none'
+    
+   
+
     
     let botonMascotaJugador = document.getElementById('btnPet')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
@@ -29,7 +33,7 @@ function seleccionarMascotaJugador() {
     sectionSeleccionarMascota.style.display = 'none'
     
     let sectionSeleccionarAtaque = document.getElementById('chooseAttack')
-    sectionSeleccionarAtaque.style.display = 'block'
+    sectionSeleccionarAtaque.style.display = 'flex'
     
     let inputGarydous = document.getElementById('garydous')
     let inputChikbo = document.getElementById('chikbo')
@@ -47,6 +51,12 @@ function seleccionarMascotaJugador() {
     }
 
     seleccionarMascotaEnemigo()
+}
+function onlyOne(radio) {
+    var radioBtn = document.getElementsByClassName('petCard')
+    radioBtn.forEach(function (item) {
+        if (item !== radio) item.checked = false
+    })
 }
 
 function seleccionarMascotaEnemigo() {
@@ -121,25 +131,37 @@ function revisarVidas() {
         crearMensajeFinal("FELICITACIONES! Ganaste :)")
     } else if (vidasJugador == 0) {
         crearMensajeFinal('Lo siento, perdiste :(')
+        document.getElementById('pikachu')
     }
 }
 
 function crearMensaje(resultado) {
-    let sectionalertsCombat = document.getElementById('alertsCombat')
-    
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', las mascota del enemigo atacó con ' + ataqueEnemigo + '- ' + resultado
+    let alertsCombat = document.getElementById('result')
+    let playerAttacks = document.getElementById('player-Attacks')
+    let enemyAttacks = document.getElementById('enemy-Attacks')
 
-    sectionalertsCombat.appendChild(parrafo)
+    
+    alertsCombat.innerHTML = resultado;
+
+    let allyAttacks = document.createElement('p')
+    allyAttacks.innerHTML = ataqueJugador;
+    
+    let rivalAttacks = document.createElement('p')
+    rivalAttacks.innerHTML = ataqueEnemigo;
+
+
+    //let parrafo = document.createElement('p')
+    //parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', las mascota del enemigo atacó con ' + ataqueEnemigo + '- ' + resultado
+
+    
+    playerAttacks.appendChild(allyAttacks)
+    enemyAttacks.appendChild(rivalAttacks)
 }
 
 function crearMensajeFinal(resultadoFinal) {
-    let sectionalertsCombat = document.getElementById('alertsCombat')
+    let alertsCombat = document.getElementById('result')
     
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = resultadoFinal
-
-    sectionalertsCombat.appendChild(parrafo)
+    alertsCombat.innerHTML = resultadoFinal
 
     let botonFuego = document.getElementById('btnFire')
     botonFuego.disabled = true
@@ -150,6 +172,8 @@ function crearMensajeFinal(resultadoFinal) {
 
     let sectionreboot = document.getElementById('reboot')
     sectionreboot.style.display = 'block'
+    
+    
 }
 
 function rebootGame() {

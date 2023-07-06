@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap');
 
-
 body{
     font-family: 'Press Start 2P', cursive;
     background-color: #10A19D;
 }
 
-
-input[type="radio"]{
+/**input{
     display: none;
-    justify-content: center;
-}
-input[type="radio"]:checked {
-    background-color: #f0f8ff;
+}**/
+
+input:checked + label{
+    background-color: #C4B0FF;
 }
 
 #title{
@@ -20,59 +18,51 @@ input[type="radio"]:checked {
     display:flex;
     justify-content:center;
     align-items:center; 
-    height: auto;
-    width: auto;
-    font-size: 70px;
+    font-size: 4vmax;
     margin: 50px 0px 0px 0px;
     text-shadow: 2px 2px 2px black;
-    
 }
 
-#choosePet{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.subtitle{
+h2{
     color: #FFBF00;
     padding: 0px 0px 0px 0px ;
     text-shadow: 1px 1px 1px black;
 }
 
-.petCard{
-    width: 250px;
-    height: 330px;
-    background-color: #77037B;
-    padding: 10px;
-    box-sizing: content-box;
-    margin: 20px;
-    border: 1px solid hotpink;
-    color: #10A19D;
-    text-align: center;
-    border-radius: 20%;
-    font-size: 20px;
-    text-shadow: 1px 1px 1px black;
+#choosePet{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    border-color: transparent;
-}
-.petCard img{
-    justify-items: center;
-    overflow: hidden;
+    align-items: center;
 }
 
 .btnStats{
-    display: flex;
     font-size: 15px;
+    gap: 5px;
+    width: auto;
+    display: flex;
+}    
+.petCard{
+    max-width: 30vmax;
+    max-height: 35vmax;
+    background-color: #77037B;
+    display: flex;
+    margin: 15px;
+    color: #10A19D;
+    text-align: center;
+    border-radius: 20%;
+    font-size: 3vmax;
+    text-shadow: 1px 1px 1px black;
+    border-color: transparent;
+    flex-direction: column;
 }
-label:hover{
-    cursor: pointer;
-    background-color: #f0f8ff;
+
+.petCard img{
+    overflow: hidden;
 }
+
 .subtitle {
-    font-size: 50px;
+    font-size: 3vmax;
 }
 
 #btnPet{
@@ -100,12 +90,7 @@ label:hover{
     -3px -3px 2px 2px #ACBCFF
     3px 1px 2px 2px #ACBCFF;
 }
-input:focus .label {
-  color: #B799FF;
-}
-input:blur .label{
-    color: #f0f8ff;
-}
+
 #chooseAttack{
     display: flex;
     flex-direction: column;
@@ -119,15 +104,12 @@ input:blur .label{
     font-family: 'Bungee', cursive;
     font-size: 20px;
     padding: 1px 6px;
-    color: #f0f8ff;
-    background-color: #77037B;
     box-sizing: 20px;
     border-color: transparent;
+    
 }
 .btnAttack:hover{
     cursor: pointer;
-    background-color: #f0f8ff;
-    color: #77037B;
     border-color: transparent;
 }
 #alerts-Combat{
@@ -182,6 +164,10 @@ input:blur .label{
     
 }
 
-@media (max-width:360 )
+@media (max-width: 480px){
+    .btnStats{
+        flex-direction: column;
+    }
+}
 
 

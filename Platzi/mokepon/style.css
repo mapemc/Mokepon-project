@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap');
+
+body{
+    font-family: 'Press Start 2P', cursive;
+    background-color: #10A19D;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background-color: #C4B0FF;
+}
+
+#title{
+    color:#FF7000;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    font-size: 4vmax;
+    margin: 50px 0px 0px 0px;
+    text-shadow: 2px 2px 2px black;
+}
+
+h2{
+    color: #FFBF00;
+    padding: 0px 0px 0px 0px ;
+    text-shadow: 1px 1px 1px black;
+}
+
+#choosePet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btnStats{
+    display: flex;
+    
+}
+  
+.petCard{
+    width: 22vmax;
+    height: 25vmax;
+    background-color: #77037B;
+    display: flex;
+    margin: 15px;
+    color: #10A19D;
+    text-align: center;
+    border-radius: 20%;
+    font-size: 2vmax;
+    text-shadow: 1px 1px 1px black;
+    flex-direction: column;
+    
+}
+
+.petCard img{
+    overflow: hidden;
+}
+
+.subtitle {
+    font-size: 2.5vmax;
+}
+
+#btnPet{
+    display: flex;
+    height: auto;
+    width:auto;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #B799FF;
+    font-size: 15px;
+    padding: 10px;
+    box-shadow:
+    inset -3px 3px 2px 2px #ACBCFF
+    inset -3px -3px 2px 2px #ACBCFF
+    inset 3px 1px 2px 2px #ACBCFF;
+    position: relative;
+}
+
+
+#btnPet:hover{
+    cursor: pointer;
+    background-color: #000000;
+    color: #B799FF;
+    box-shadow:
+    -3px 3px 2px 2px #ACBCFF
+    -3px -3px 2px 2px #ACBCFF
+    3px 1px 2px 2px #ACBCFF;
+}
+
+#chooseAttack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.btnAttack{
+    width: auto;
+    height: 60px;
+    border-radius: 100px ;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    padding: 1px 6px;
+    box-sizing: 20px;
+    border-color: transparent;
+    
+}
+.btnAttack:hover{
+    cursor: pointer;
+    border-color: transparent;
+}
+#alerts-Combat{
+    width: auto;
+    padding: 10px;
+    color: #f0f8ff;
+    background-color: #77037B;
+    border-radius: 30px;
+    border: transparent;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction:column ;
+}
+
+#btnReboot{
+    border: none;
+    color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    width: 150px;
+
+}
+.attacks{
+    display: grid;
+    grid-template-columns: [column1] 170px [column2] 170px ;
+    column-gap: 50px;
+    padding: 14px 0px 14px 0px;
+    place-items: center;
+    align-content: center;
+}
+#hpAllyPet{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 1px;
+    margin: 10px;
+}
+#hpEnemyPet{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 1px;
+    margin: 10px;
+}
+#player-Attacks{
+    align-self: stretch;
+    
+}
+#enemy-Attacks{
+    align-self: stretch;
+    
+}
+
+@media (max-width:500px  ){
+    #containerCards{
+        display:  grid;
+        grid-template-areas:"heade header" "sidebar sidebar" ;
+    }
+}
+
+

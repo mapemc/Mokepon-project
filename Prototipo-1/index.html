@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Header con menú desplegable</title>
+    <style>
+        /* Estilos para el header */
+        header {
+            background-color: #a385bc;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Estilos para el logo de la empresa */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Estilos para el menú desplegable */
+        .menu {
+            position: relative;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+        }
+
+        .menu:hover ul {
+            display: block;
+        }
+
+        .menu li {
+            padding: 10px;
+        }
+
+        /* Estilos para el icono de usuario desplegable */
+        .user-icon {
+            position: relative;
+        }
+
+        .user-icon .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #333;
+        }
+
+        .user-icon:hover .dropdown {
+            display: block;
+        }
+
+        .user-icon .dropdown li {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="ruta_del_logo.png" alt="Logo de la empresa">
+            <h1>Nombre de la Empresa</h1>
+        </div>
+        <div class="menu">
+            <span>Menú</span>
+            <ul>
+                <li><a href="#">Sección 1</a></li>
+                <li><a href="#">Sección 2</a></li>
+                <li><a href="#">Sección 3</a></li>
+            </ul>
+        </div>
+        <div class="user-icon">
+            <img src="ruta_del_icono_usuario.png" alt="Icono de usuario">
+            <ul class="dropdown">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Resto del contenido de la página -->
+</body>
+
+</html>

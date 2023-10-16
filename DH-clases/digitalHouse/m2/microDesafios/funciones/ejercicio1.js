@@ -19,6 +19,6 @@ function calculoVehiculo(tipoVehivulo, diasAlquiler, sillaBebe) {
    }
     precioFinal = ((tipoVehivulo + sillaBebe) * diasAlquiler)
     
-    return console.log("Estimado cliente: en base al tipo de vehículo " + tipoVehivulo + " alquilado, considerando los " + diasAlquiler + " días utilizados, el monto total a pagar es de " + precioFinal);
+    return "Estimado cliente: en base al tipo de vehículo " + tipoVehivulo + " alquilado, considerando los " + diasAlquiler + " días utilizados, el monto total a pagar es de " + precioFinal
 }
-console.log(calculoVehiculo("camioneta", 28,1));
+calculoVehiculo("camioneta", 28,1)
